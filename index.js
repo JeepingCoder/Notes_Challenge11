@@ -1,3 +1,4 @@
+const PORT = process.env.PORT || 3001;
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
@@ -76,6 +77,6 @@ app.get("*", (req, res)=> {
 res.render("index.html")
 })
  
-app.listen(3001, () => {
-  console.log("App Listening on port 3001")
+app.listen(PORT, () => {
+  console.log("App Listening on port ${ PORT }")
 });
